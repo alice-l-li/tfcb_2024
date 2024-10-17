@@ -59,7 +59,7 @@ vader.txt<br>
 _Paste your SCRIPT here (not the output)_
 ```
 #! /bin/sh
-set -eu
+set -e
 
 echo "My username is $USER" >question01.txt
 echo "my home directory is $HOME" >>question01.txt
@@ -68,7 +68,29 @@ ls -1 ../../lectures/lecture04/ >>question01.txt
 
 mv question01.txt ../../homeworks/homework02/.
 ```
-$USER was calling whitespace for me, but I am expecting the user's username (e.g. alice) to be filled in the prompt
+$USER was throwing an error ("unbound variable") for me when I had `set -eu` and removing the -u resolved it. I now have whitespace for $USER but am expecting the user's username (e.g. alice) to be filled in the prompt
+
+_OUTPUT_
+```
+My username is 
+My home directory is /root
+The contents of the tfcb_2024/lectures/lecture04/ directory are
+01-first-steps.md
+02-directories
+03-redirection
+04-vim
+05-history
+06-scripting
+07-more-interactive-shell
+README.md
+question01.txt
+quickref.md
+scripthw1.sh
+scripthw2.sh
+sequence.gb
+slides
+vader.txt
+```
 
 
 ## Problem 2
@@ -102,3 +124,6 @@ mkdir question02
 for i in `cat list.txt` ; do echo "Number of gummy bears eaten: $i" > file$i.txt ; mv file$i.txt question02 ; done
 ```
 
+_OUTPUT_
+
+Folder linked here in the [../../homeworks/homework02/](https://github.com/alice-l-li/tfcb_2024/tree/main/homeworks/homework02/question02) directory
