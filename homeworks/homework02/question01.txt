@@ -1,0 +1,18 @@
+My username is 
+My home directory is /root
+The contents of the tfcb_2024/lectures/lecture04/ directory are
+01-first-steps.md
+02-directories
+03-redirection
+04-vim
+05-history
+06-scripting
+07-more-interactive-shell
+README.md
+question01.txt
+quickref.md
+scripthw1.sh
+scripthw2.sh
+sequence.gb
+slides
+vader.txt

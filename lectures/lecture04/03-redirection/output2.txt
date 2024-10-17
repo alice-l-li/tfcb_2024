@@ -1,0 +1,14 @@
+Thu Oct 17 06:07:38 UTC 2024
+vader.txt
+01-first-steps.md
+02-directories
+03-redirection
+04-vim
+05-history
+06-scripting
+07-more-interactive-shell
+README.md
+quickref.md
+sequence.gb
+slides
+vader.txt
