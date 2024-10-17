@@ -13,6 +13,10 @@ Complete the interactive tutorial.
 
 _Did you hit any points of frustration, and if so, how could we improve the material to avoid that frustration?_
 
+The tutorial itself was generally quite detailed and easy to follow. I had run into some confusion with how to open a vim editor (just type "vim" in command) because this wasn't explained, but the --help was easy to fix this problem.
+While I was working through the puritanical shell scripting tutorial in 06-scripting, I was confused about some file names (e.g. script2.sh wasn't mentioned before writing the sleep command section), and $USER and $EDITOR variables were returning whitespace for me (maybe because I was working in the container?).
+What may be helpful is having a repository of common questions.
+
 
 ## Problem 1
 
@@ -53,6 +57,18 @@ slides<br>
 vader.txt<br>
 
 _Paste your SCRIPT here (not the output)_
+```
+#! /bin/sh
+set -eu
+
+echo "My username is $USER" >question01.txt
+echo "my home directory is $HOME" >>question01.txt
+echo "The contents of the tfcb_2024/lectures/lecture04/ directory are" >>question01.txt
+ls -1 ../../lectures/lecture04/ >>question01.txt
+
+mv question01.txt ../../homeworks/homework02/.
+```
+$USER was calling whitespace for me, but I am expecting the user's username (e.g. alice) to be filled in the prompt
 
 
 ## Problem 2
@@ -76,5 +92,13 @@ tfcb_2023/homeworks/homework02/list.txt
 You can make the contents of those files whatever you want (hint: slide 9... )
 
 _Paste your SCRIPT here (not the output)_
+```
+#! /bin/sh
+set -eu
 
+cd ../../homeworks/homework02/
+mkdir question02
+
+for i in `cat list.txt` ; do echo "Number of gummy bears eaten: $i" > file$i.txt ; mv file$i.txt question02 ; done
+```
 
