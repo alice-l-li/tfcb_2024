@@ -41,4 +41,6 @@ Thumbs.db
 # other #
 #########
 _ignore/
+homeworks/homework02/
+lectures/lecture15/TFCB_data/
 *.key
